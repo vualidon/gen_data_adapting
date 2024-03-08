@@ -1,9 +1,10 @@
 import google.generativeai as genai
 import random
-
+from time import sleep
 def extract_keywords(sentence, key):
     genai.configure(api_key=key)
     model = genai.GenerativeModel('gemini-pro')
+    sleep(1.5)
     try:
         prompt = f"""
 ###INSTRUCTIONS###
